@@ -45,7 +45,7 @@ class DefaultLayout extends Component {
           </Suspense>
         </AppHeader>
         <div className="app-body">
-          <AppSidebar fixed display="lg">
+          {/* <AppSidebar fixed display="lg">
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
@@ -53,9 +53,9 @@ class DefaultLayout extends Component {
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
-          </AppSidebar>
+          </AppSidebar> */}
           <main className="main">
-            <AppBreadcrumb appRoutes={routes}/>
+            {/* <AppBreadcrumb appRoutes={routes}/> */}
             <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>
@@ -76,11 +76,11 @@ class DefaultLayout extends Component {
               </Suspense>
             </Container>
           </main>
-          <AppAside fixed>
+          {/* <AppAside fixed>
             <Suspense fallback={this.loading()}>
               <DefaultAside />
             </Suspense>
-          </AppAside>
+          </AppAside> */}
         </div>
         <AppFooter>
           <Suspense fallback={this.loading()}>
