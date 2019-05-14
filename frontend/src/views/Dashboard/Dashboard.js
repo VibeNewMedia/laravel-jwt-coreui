@@ -25,6 +25,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import { Link, Redirect } from 'react-router-dom'
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 import { FaBeer,FaGrinBeam, FaCommentAlt, FaFileContract, FaFileAlt, FaPeopleCarry, FaSchool, FaBookMedical, FaBed,  FaMapMarkerAlt,FaRegWindowClose, FaSubway, FaMoneyCheck, FaIdCard, FaHandsHelping} from 'react-icons/fa';
@@ -267,7 +268,7 @@ class Dashboard extends Component {
       <div className="animated fadeIn">
       <Row>
           <Col>
-   
+
             <img className="profile-image" src={'../../assets/img/avatars/6.jpg'} width="85px" height="85px" />
             <h1 className="profile-name">Joe Bloggs</h1>
       
@@ -330,7 +331,8 @@ class Dashboard extends Component {
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
                 <FaCommentAlt/>
-                  <p>Supervisor</p>
+                 <Link to={'/Supervisor'} >Supervisor</Link>
+                 
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaFileContract />
