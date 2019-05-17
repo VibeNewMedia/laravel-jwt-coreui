@@ -50,7 +50,7 @@ class Page extends Component {
     // }
 
     handleToggle(){
-      console.log('clickyclicky/');
+      
 
       this.setState({
         modalOpen: !this.state.modalOpen,
@@ -127,7 +127,7 @@ class Page extends Component {
 
     let successMessage = <div></div>;
     if ( isAuthenticated ) {
-      successMessage = <Alert color="success">{"Congradulations you are logged in."}</Alert>;
+      successMessage = <Alert color="success">{"you are logged in."}</Alert>;
       return (
 		    <Redirect to={ from }/>
 		  )

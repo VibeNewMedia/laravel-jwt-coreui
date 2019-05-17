@@ -51,10 +51,11 @@ const Education = React.lazy(() => import('./views/Cards/Education'));
 const ProfessionalSupport = React.lazy(() => import('./views/Cards/ProfessionalSupport'));
 const Maps = React.lazy(() => import('./views/Cards/Maps'));
 const Diary = React.lazy(() => import('./views/Cards/Diary'));
-
+const Login = React.lazy(() => import('./views/Pages/Login/'));
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-  { path: '/', exact: true, name: 'Home', component: DefaultLayout },
+  { path: '/', name: 'Home', component: DefaultLayout },
+  { path: '/login', exact: true, name: "Login", component: Login},
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/supervisor', name: 'Supervisor', component: Supervisor },
   { path: '/licenseconditions', name: 'LicenseConditions', component: LicenseConditions },

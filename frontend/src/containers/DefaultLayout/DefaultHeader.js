@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { Badge, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem, NavLink } from 'reactstrap';
 import PropTypes from 'prop-types';
 
@@ -15,11 +15,36 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
-  render() {
+  constructor(props) {
+		super(props);
+		this.state = {
+      modalIsOpen: false,
+      logout: false,
+		}
 
+		this.handleLogout = this.handleLogout.bind(this);
+
+  }
+  
+  handleLogout(e) {
+		console.log("logout fired");
+    this.setState({
+        logout: true,
+    });
+
+
+	}
+
+  render() {
+    
     // eslint-disable-next-line
     const { children, ...attributes } = this.props;
-
+    console.log("state", this.props);
+   
+    if (this.state.logout) {
+     return <Redirect to={ '/login' }/>
+    }
+   
     return (
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
@@ -38,7 +63,7 @@ class DefaultHeader extends Component {
               <DropdownItem header tag="div" className="text-center"><strong>Settings</strong></DropdownItem>
               <DropdownItem><i className="fa fa-user"></i> Profile</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem onClick={e => this.props.onLogout(e)}><i className="fa fa-lock"></i> Logout</DropdownItem>
+              <DropdownItem onClick={this.handleLogout}><i className="fa fa-lock"></i> Logout</DropdownItem>
             </DropdownMenu>
           </AppHeaderDropdown>
         </Nav>
