@@ -37,12 +37,40 @@ const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 const Supervisor = React.lazy(() => import('./views/Cards/Supervisor'));
+const LicenseConditions = React.lazy(() => import('./views/Cards/LicenseConditions'));
+const LicenseNonAssociation = React.lazy(() => import('./views/Cards/LicenseNonAssociation'));
+const ExclusionZones = React.lazy(() => import('./views/Cards/ExclusionZones'));
+const Residence = React.lazy(() => import('./views/Cards/Residence'));
+const SupportNetwork = React.lazy(() => import('./views/Cards/SupportNetwork'));
+const Health = React.lazy(() => import('./views/Cards/Health'));
+const Employment = React.lazy(() => import('./views/Cards/Employment'));
+const BudgetingFinance = React.lazy(() => import('./views/Cards/BudgetingFinance'));
+const Transport = React.lazy(() => import('./views/Cards/Transport'));
+const Leisure = React.lazy(() => import('./views/Cards/Leisure'));
+const Education = React.lazy(() => import('./views/Cards/Education'));
+const ProfessionalSupport = React.lazy(() => import('./views/Cards/ProfessionalSupport'));
+const Maps = React.lazy(() => import('./views/Cards/Maps'));
+const Diary = React.lazy(() => import('./views/Cards/Diary'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: '/', exact: true, name: 'Home', component: DefaultLayout },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/supervisor', name: 'Supervisor', component: Supervisor },
+  { path: '/licenseconditions', name: 'LicenseConditions', component: LicenseConditions },
+  { path: '/licensenonassociation', name: 'LicenseNonAssociation', component: LicenseNonAssociation },
+  { path: '/exclusionzones', name: 'ExclusionZones', component: ExclusionZones },
+  { path: '/residence', name: 'Residence', component: Residence },
+  { path: '/supportnetwork', name: 'SupportNetwork', component: SupportNetwork },
+  { path: '/health', name: 'Health', component: Health },
+  { path: '/employment', name: 'Employment', component: Employment },
+  { path: '/budgetingfinance', name: 'BudgetingFinance', component: BudgetingFinance },
+  { path: '/transport', name: 'Transport', component: Transport },
+  { path: '/leisure', name: 'Leisure', component: Leisure },
+  { path: '/education', name: 'Education', component: Education },
+  { path: '/professionalsupport', name: 'ProfessionalSupport', component: ProfessionalSupport },
+  { path: '/maps', name: 'Maps', component: Maps },
+  { path: '/diary', name: 'Diary', component: Diary },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },

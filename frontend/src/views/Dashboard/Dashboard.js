@@ -336,67 +336,67 @@ class Dashboard extends Component {
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaFileContract />
-                  <p>License Conditions</p>
+                <Link to={'/LicenseConditions'} >License Conditions</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaFileAlt />
-                  <p>License Non Association</p>
+                <Link to={'/LicenseNonAssociation'} >License Non Association</Link>
                 </Col>
               </Row>
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
                 <FaRegWindowClose />
-                  <p>Exclusion Zones</p>
+                <Link to={'/ExclusionZones'} >Exclusion Zones</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaBed />
-                  <p>Residence</p>
+                <Link to={'/Residence'} >Residence</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaPeopleCarry />
-                  <p>Support Network</p>
+                <Link to={'/SupportNetwork'} >Support Network</Link>
                 </Col>
               </Row>
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
                 <FaBookMedical />
-                  <p>Health Needs / Support</p>
+                <Link to={'/Health'} >Health Needs / Support</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaIdCard />
-                  <p>Employment</p>
+                <Link to={'/Employment'} >Employment</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaMoneyCheck />
-                  <p>Budgeting &amp; Finance</p>
+                <Link to={'/BudgetingFinance'} >Budgeting &amp; Finance</Link>
                 </Col>
               </Row>
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
                 <FaSubway />
-                  <p>Transport</p>
+                <Link to={'/Transport'} >Transport</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaGrinBeam />
-                  <p>Leisure</p>
+                <Link to={'/Leisure'} >Leisure</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaSchool />
-                  <p>Education</p>
+                <Link to={'/Education'} >Education</Link>
                 </Col>
               </Row>
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
                 <FaHandsHelping />
-                  <p>Professional Support</p>
+                <Link to={'/ProfessionalSupport'} >Professional Support</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaMapMarkerAlt />
-                  <p>My Maps</p>
+                <Link to={'/Maps'} >My Maps</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
                 <FaBeer />
-                  <p>My Diary</p>
+                <Link to={'/Diary'} >My Diary</Link>
                 </Col>
               </Row>
   

@@ -32,7 +32,7 @@ import {
     CarouselCaption
   } from 'reactstrap';
 
-class Supervisor extends Component {
+class ExclusionZones extends Component {
     constructor(props) {
         super(props);
 
@@ -42,7 +42,7 @@ class Supervisor extends Component {
         this.updateTextField = this.updateTextField.bind(this);
 
         this.state = {
-            title: "Supervisor",
+            title: "Exclusion Zones",
             sub_title: "",
             main_aim: "Make a new appointment",
             question_1: "What do I need help with?",
@@ -244,4 +244,4 @@ class Supervisor extends Component {
 }
 
 
-export default Supervisor;
+export default ExclusionZones;
