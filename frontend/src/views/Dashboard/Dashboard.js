@@ -268,11 +268,8 @@ class Dashboard extends Component {
       <div className="animated fadeIn">
       <Row>
           <Col>
-
-            <img className="profile-image" src={'../../assets/img/avatars/6.jpg'} width="85px" height="85px" />
-            <h1 className="profile-name">Joe Bloggs</h1>
-      
-    
+            <img className="profile-image" src={'../../assets/img/avatars/9.jpg'} width="85px" height="85px" />
+            <h1 className="profile-name">Levi Strange</h1>
             </Col>
       </Row>
       
