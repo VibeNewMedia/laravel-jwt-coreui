@@ -1,1 +1,36 @@
 // Here you can add other styles
+.white-text {
+    color: white;
+}
+.profile-image {
+    border-radius: 42px;
+    display: block;
+    margin: 0 auto;
+}
+.profile-name {
+    text-align: center 
+}
+.grid-dashboard {
+    text-align: center;
+    
+}
+.grid-row {
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+.grid-row:last-child {
+    border-bottom: none;
+}
+
+.grid-row p {
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.grid-row a {
+    display: block;
+    color: white;
+    margin-top: 5px;
+    font-size: 10px;
+}

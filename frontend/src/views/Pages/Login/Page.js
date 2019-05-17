@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom'
+import { AppNavbarBrand } from '@coreui/react';
 import { Alert, Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 import PropTypes from 'prop-types'
 import ReeValidate from 'ree-validate'
 import AuthService from '../../../services'
+import vaux from  '../../../assets/img/brand/vaux.png'
+import BGlogin from  '../../../assets/img/content/vaux-login.jpg'
 
 class Page extends Component {
   constructor(props) {
@@ -14,6 +17,8 @@ class Page extends Component {
         });
 
         this.state = {
+            modalOpen: false,
+          
             isAuthenticated:'',
             credentials: {
                 email: '',
@@ -31,6 +36,7 @@ class Page extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleKeyUp = this.handleKeyUp.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleToggle = this.handleToggle.bind(this);
     }
 
     // handleChange = (event) => {
@@ -42,6 +48,15 @@ class Page extends Component {
 
     //     this.setState({credentials})
     // }
+
+    handleToggle(){
+      console.log('clickyclicky/');
+
+      this.setState({
+        modalOpen: !this.state.modalOpen,
+        buttonClicked: !this.state.modalOpen
+      })
+    }
 
     handleChange(event) {
         const name = event.target.name;
@@ -134,21 +149,34 @@ class Page extends Component {
       console.log(this.state.responseError);
         serverMessage = <Alert color="danger">{this.state.responseError.text}</Alert>
     }
-      
+    
     return (
-      <div className="app flex-row align-items-center">
+      <div className="app flex-row align-items-center">        
         <Container>
           <Row className="justify-content-center">
-            <Col md="8">
+            <Col md="8">  
+            
               <CardGroup>
-                <Card className="p-4">
+                <Card className="p-4" style={{backgroundImage: "url(" + BGlogin + ")", backgroundSize: 'cover' }}>
                   <CardBody>
                     { validatorMessage }
                     { serverMessage }
                     { successMessage }
                     <Form>
-                      <h1>Login</h1>
-                      <p className="text-muted">Sign In to your account</p>
+                    <img src={vaux}/>
+                   
+                    { ! this.state.modalOpen &&
+                    <div>
+                      <h1 className="white-text">Welcome to Vaux!</h1>
+                      <p className="white-text">The best way to navigate your new life and manage your future</p>
+                      <p className="white-text">Sign In to your account, and lets get started!</p>
+                     
+                      <Button color="primary" className="px-4" onClick={this.handleToggle}>Lets Begin</Button>
+                    </div>
+                    }
+
+                    { this.state.modalOpen &&
+                      <div>
                       <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
@@ -164,6 +192,7 @@ class Page extends Component {
                           onKeyUp={this.handleKeyUp}
                         />
                       </InputGroup>
+                      
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
@@ -187,13 +216,19 @@ class Page extends Component {
                           <Button color="link" className="px-0">Forgot password?</Button>
                         </Col>
                       </Row>
+                      </div>
+                      }
+                      
+                      
                     </Form>
                   </CardBody>
                 </Card>
               </CardGroup>
+            
             </Col>
           </Row>
         </Container>
+        
       </div>
     );
   }
