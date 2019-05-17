@@ -23,23 +23,12 @@ class DefaultHeader extends Component {
     return (
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
-        <AppNavbarBrand
+        <Link to="/" className="nav-link" >
+          <AppNavbarBrand
           full={{ src: vaux, width: 89, height: 25, alt: 'Vaux Logo' }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
-        />
+          />
+        </Link>
         <AppSidebarToggler className="d-md-down-none" display="lg" />
-
-        <Nav className="d-md-down-none" navbar>
-          <NavItem className="px-3">
-            <Link to="/" className="nav-link" >Home</Link>
-          </NavItem>
-          <NavItem className="px-3">
-            <Link to="/users">Users</Link>
-          </NavItem>
-          <NavItem className="px-3">
-            <NavLink href="#">Settings</NavLink>
-          </NavItem>
-        </Nav>
         <Nav className="ml-auto" navbar>
           <AppHeaderDropdown direction="down">
             <DropdownToggle nav>
