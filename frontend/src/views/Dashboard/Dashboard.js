@@ -267,17 +267,15 @@ class Dashboard extends Component {
     return (
       <div className="animated fadeIn">
       <Row>
-          <Col>
-
-            <img className="profile-image" src={'../../assets/img/avatars/9.jpg'} width="85px" height="85px" />
+          <Col className="profile-container">
+            <img className="profile-image" src={'../../assets/img/avatars/9.jpg'} />
             <h1 className="profile-name">Levi Strange</h1>
-
             </Col>
       </Row>
 
        <Row>
           <Col>
-              <CardHeader>
+              <CardHeader className="dashboard">
                 Aims and Objectives
               </CardHeader>
               <Carousel
@@ -307,10 +305,10 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <CardHeader>
+            <CardHeader className="dashboard">
               Key Actions Get to 100%
             </CardHeader>
-            <Card className="text-white bg-primary">
+            <Card className="text-white bg-primary dashboard">
               <CardBody className="pb-0">
               <p className="card-content">Bank Account</p>
               <p className="card-content">Register at Job Centre</p>
@@ -320,10 +318,10 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <CardHeader>
+            <CardHeader className="dashboard">
               Your Sections
             </CardHeader>
-            <Card className="text-white bg-primary">
+            <Card className="text-white bg-primary dashboard">
               <CardBody className="grid-dashboard pb-0">
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">

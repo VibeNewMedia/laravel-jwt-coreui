@@ -1,6 +1,8 @@
 @import "components/footer/footer.scss";
 @import "components/cards/cards.scss";
 @import "components/palette/palette.scss";
+@import "components/profile/profile.scss";
+@import "components/dashboard/dashboard.scss";
 
 // Here you can add other styles
 .white-text {
@@ -12,7 +14,11 @@
     margin: 0 auto;
 }
 .profile-name {
-    text-align: center
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 600;
+    color: #454F63;
+    text-align: center;
+
 }
 .grid-dashboard {
     text-align: center;
@@ -42,4 +48,31 @@
 // Main body
 .main {
   background-color: #F7F7FA;
+}
+
+h1 {
+  font-family: canada-type-gibson, sans-serif;
+  font-size: 40px;
+  color: #454F63;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+h3 {
+  font-family: canada-type-gibson, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #C40000;
+  background-color: transparent;
+  border-bottom: none;
+  text-align: left;
+  text-decoration: none;
+}
+
+h4 {
+  font-family: canada-type-gibson, sans-serif;
+  font-size: 16px;
+  color: #78849E;
+  font-weight: 100;
+  margin: 10px 0 20px 0;
 }
