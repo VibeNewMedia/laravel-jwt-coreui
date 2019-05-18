@@ -15,7 +15,7 @@ import {
   AppSidebarNav,
 } from '@coreui/react';
 // sidebar nav config
-import navigation from '../../_nav';
+import navigation from '../../_nav_vaux';
 // routes config
 import routes from '../../routes';
 import AuthService from '../../services'
@@ -45,7 +45,7 @@ class DefaultLayout extends Component {
           </Suspense>
         </AppHeader>
         <div className="app-body">
-          {/* <AppSidebar fixed display="lg">
+          <AppSidebar fixed display="lg">
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
@@ -53,7 +53,7 @@ class DefaultLayout extends Component {
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
-          </AppSidebar> */}
+          </AppSidebar>
           <main className="main">
             {/* <AppBreadcrumb appRoutes={routes}/> */}
             <Container fluid>

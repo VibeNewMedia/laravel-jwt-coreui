@@ -15,7 +15,8 @@ class DefaultFooter extends Component {
 
     return (
       <React.Fragment>
-        <span class="footer__title">&copy; 2018 V-AUX</span>
+        <p>VAUX &copy; 2019. 1-2-3 Working Together Ltd.</p>
+        <span className="ml-auto">Powered by <a href="https://vibenewmedia.co.uk">Vibe New Media, Ltd</a></span>
       </React.Fragment>
     );
   }
