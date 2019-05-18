@@ -1,3 +1,7 @@
+@import "components/footer/footer.scss";
+@import "components/cards/cards.scss";
+@import "components/palette/palette.scss";
+
 // Here you can add other styles
 .white-text {
     color: white;
@@ -8,11 +12,11 @@
     margin: 0 auto;
 }
 .profile-name {
-    text-align: center 
+    text-align: center
 }
 .grid-dashboard {
     text-align: center;
-    
+
 }
 .grid-row {
     border-bottom: 1px solid grey;
@@ -33,4 +37,9 @@
     color: white;
     margin-top: 5px;
     font-size: 10px;
+}
+
+// Main body
+.main {
+  background-color: #F7F7FA;
 }

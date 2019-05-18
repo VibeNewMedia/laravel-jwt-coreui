@@ -1,0 +1,36 @@
+.bg-primary {
+  background-color: #FFF !important;
+}
+
+.grid-row {
+  border-bottom: 1px solid #F4F4F6 !important;
+  padding-bottom: 20px;
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+.no-border {
+  border-bottom: none !important;
+}
+
+.card {
+  border-radius: 12px;
+
+  &.bg-primary {
+    border-color: transparent;
+  }
+
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.card-content {
+  font-family: canada-type-gibson, sans-serif;
+  color: #454F63 !important;
+  font-size: 13px !important;;
+}
