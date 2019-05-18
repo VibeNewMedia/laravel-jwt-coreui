@@ -119,7 +119,7 @@ class Supervisor extends Component {
                         <input  defaultValue={this.state.main_aim}/>
                         </CardTitle> */}
                         <CardTitle> {this.state.main_aim} 
-                        <p>I need help:<AppSwitch  className={'mx-1'} color={'danger'} onChange={this.toggle}/></p>
+                        <Button color={this.state.sos_mode ? 'link' : 'danger'} onClick={this.toggle}>{this.state.sos_mode ? 'I did it' : 'SOS'}</Button>
                         </CardTitle>
                  
                 <div id="accordion">

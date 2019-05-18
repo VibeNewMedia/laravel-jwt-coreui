@@ -1,0 +1,40 @@
+
+html:not([dir="rtl"]) .sidebar {
+    margin-left: -250px;
+}
+.sidebar .nav {
+    width: 250px;
+}
+.nav-item {
+    padding: 10px 0px 10px;
+}
+
+.sidebar .nav-title {
+    padding: 1.75rem 1.3rem;
+    color: #1f1f1f; 
+    border-bottom: 4px solid #f86c6b;
+}
+
+.sidebar .nav-link.disabled, 
+.sidebar .nav-link.active {
+    color: black;
+}
+.sidebar .nav-link .nav-icon, 
+.sidebar .nav-link.disabled .nav-icon,
+.sidebar .nav-link.active .nav-icon {   
+    color: red;
+}
+.sidebar .sidebar-nav {
+    width: 250px;
+    background-color: #fff;
+}
+.sidebar .nav-link.active {
+    background-color: #fff;
+    
+}
+@media (max-width: 991.98px) {
+    .sidebar { 
+
+        width: 250px;  
+    }
+}

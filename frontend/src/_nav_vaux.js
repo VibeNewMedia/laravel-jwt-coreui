@@ -2,7 +2,7 @@ export default {
   items: [  
     {
       title: true,
-      name: '',
+      name: 'Hello, Levi Strange',
       wrapper: {
         element: '',
         attributes: {},
@@ -17,46 +17,38 @@ export default {
     {
         name: 'My Profile',
         url: '/base',
-        icon: 'icon-puzzle',
+        icon: 'icon-calendar',
         attributes: { disabled: true },
       },
      
       {
         name: 'My Action Plan',
         url: '/base',
-        icon: 'icon-puzzle',
+        icon: 'icon-note',
         attributes: { disabled: true },
       },
       {
         name: 'My Stats',
         url: '/base',
-        icon: 'icon-puzzle',
+        icon: 'icon-user',
         attributes: { disabled: true },
       },
       {
         name: 'Contact Us',
         url: '/base',
-        icon: 'icon-puzzle',
+        icon: 'icon-info',
         attributes: { disabled: true },
       },
       {
         name: 'Support',
         url: '/base',
-        icon: 'icon-puzzle',
+        icon: 'icon-shield',
         attributes: { disabled: true },
       },
-   
-    {
-      name: 'Disabled',
-      url: '/dashboard',
-      icon: 'icon-ban',
-      attributes: { disabled: true },
-    },
-   
     {
         name: 'Log Out',
         url: '/login',
-        icon: 'icon-layers',
+        icon: 'icon-logout',
         variant: 'danger',
         attributes: { target: '_blank', rel: "noopener" },
     },
