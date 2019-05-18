@@ -271,18 +271,16 @@ class Dashboard extends Component {
 
             <img className="profile-image" src={'../../assets/img/avatars/6.jpg'} width="85px" height="85px" />
             <h1 className="profile-name">Joe Bloggs</h1>
-      
-    
+
+
             </Col>
       </Row>
-      
+
        <Row>
           <Col>
-            <Card>
               <CardHeader>
                 Aims and Objectives
               </CardHeader>
-            </Card>
               <Carousel
                 activeIndex={activeIndex}
                 next={this.next}
@@ -293,7 +291,7 @@ class Dashboard extends Component {
                 <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                 <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
               </Carousel>
-            
+
           </Col>
         </Row>
         <Row>
@@ -310,105 +308,104 @@ class Dashboard extends Component {
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-primary">
             <CardHeader>
               Key Actions Get to 100%
             </CardHeader>
+            <Card className="text-white bg-primary">
               <CardBody className="pb-0">
-              <p>Bank Account</p>
-              <p>Register at Job Centre</p>
-              <p>Register at Dr Surgery</p>
+              <p className="card-content">Bank Account</p>
+              <p className="card-content">Register at Job Centre</p>
+              <p className="card-content">Register at Dr Surgery</p>
               </CardBody>
             </Card>
           </Col>
 
           <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-primary">
             <CardHeader>
-              VAUX Sections
+              Your Sections
             </CardHeader>
+            <Card className="text-white bg-primary">
               <CardBody className="grid-dashboard pb-0">
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
-                <FaCommentAlt/>
-                 <Link to={'/Supervisor'} >Supervisor</Link>
-                 
+                <FaCommentAlt className="picton-blue"/>
+                 <Link to={'/Supervisor'} className="card-content">Supervisor</Link>
+
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaFileContract />
-                <Link to={'/LicenseConditions'} >License Conditions</Link>
+                <FaFileContract className="dodger-blue"/>
+                <Link to={'/LicenseConditions'} className="card-content">License Conditions</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaFileAlt />
-                <Link to={'/LicenseNonAssociation'} >License Non Association</Link>
+                <FaFileAlt className="cornflower-blue"/>
+                <Link to={'/LicenseNonAssociation'} className="card-content">License Non Association</Link>
                 </Col>
               </Row>
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
-                <FaRegWindowClose />
-                <Link to={'/ExclusionZones'} >Exclusion Zones</Link>
+                <FaRegWindowClose className="medium-purple"/>
+                <Link to={'/ExclusionZones'} className="card-content">Exclusion Zones</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaBed />
-                <Link to={'/Residence'} >Residence</Link>
+                <FaBed className="wild-strawberry"/>
+                <Link to={'/Residence'} className="card-content">Residence</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaPeopleCarry />
-                <Link to={'/SupportNetwork'} >Support Network</Link>
+                <FaPeopleCarry className="coral"/>
+                <Link to={'/SupportNetwork'} className="card-content">Support Network</Link>
                 </Col>
               </Row>
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
-                <FaBookMedical />
-                <Link to={'/Health'} >Health Needs / Support</Link>
+                <FaBookMedical className="blue" />
+                <Link to={'/Health'} className="card-content">Health Needs / Support</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaIdCard />
-                <Link to={'/Employment'} >Employment</Link>
+                <FaIdCard className="indigo"/>
+                <Link to={'/Employment'} className="card-content">Employment</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaMoneyCheck />
-                <Link to={'/BudgetingFinance'} >Budgeting &amp; Finance</Link>
+                <FaMoneyCheck className="purple"/>
+                <Link to={'/BudgetingFinance'} className="card-content">Budgeting &amp; Finance</Link>
                 </Col>
               </Row>
               <Row className="grid-row">
                 <Col xs="4" sm="4" lg="4">
-                <FaSubway />
-                <Link to={'/Transport'} >Transport</Link>
+                <FaSubway className="pink"/>
+                <Link to={'/Transport'} className="card-content">Transport</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaGrinBeam />
-                <Link to={'/Leisure'} >Leisure</Link>
+                <FaGrinBeam className="red"/>
+                <Link to={'/Leisure'} className="card-content">Leisure</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaSchool />
-                <Link to={'/Education'} >Education</Link>
+                <FaSchool className="orange"/>
+                <Link to={'/Education'} className="card-content">Education</Link>
                 </Col>
               </Row>
-              <Row className="grid-row">
+              <Row className="grid-row no-border">
                 <Col xs="4" sm="4" lg="4">
-                <FaHandsHelping />
-                <Link to={'/ProfessionalSupport'} >Professional Support</Link>
+                <FaHandsHelping className="yellow"/>
+                <Link to={'/ProfessionalSupport'} className="card-content">Professional Support</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaMapMarkerAlt />
-                <Link to={'/Maps'} >My Maps</Link>
+                <FaMapMarkerAlt className="green"/>
+                <Link to={'/Maps'} className="card-content">My Maps</Link>
                 </Col>
                 <Col xs="4" sm="4" lg="4">
-                <FaBeer />
-                <Link to={'/Diary'} >My Diary</Link>
+                <FaBeer className="teal"/>
+                <Link to={'/Diary'} className="card-content">My Diary</Link>
                 </Col>
               </Row>
-  
+
               </CardBody>
             </Card>
           </Col>
-         
-        </Row>       
+
+        </Row>
       </div>
     );
   }
 }
 
 export default Dashboard;
- 
