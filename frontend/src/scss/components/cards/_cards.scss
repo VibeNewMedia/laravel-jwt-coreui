@@ -25,12 +25,48 @@
 }
 
 .card-header {
+  font-family: canada-type-gibson, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #454F63;
   background-color: transparent;
   border-bottom: none;
+  text-align: left;
 }
 
 .card-content {
   font-family: canada-type-gibson, sans-serif;
   color: #454F63 !important;
   font-size: 13px !important;;
+}
+
+.card-body {
+
+  h5 {
+    font-family: canada-type-gibson, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #454F63;
+    background-color: transparent;
+    border-bottom: none;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .card-header {
+    padding-left: 0 !important;
+  }
+
+  textarea {
+    overflow: auto;
+    height: 50px;
+  }
+
+}
+
+.btn-link:hover {
+  text-decoration: none;
+}
+.border-danger {
+  border: solid 3px #C40000;
 }

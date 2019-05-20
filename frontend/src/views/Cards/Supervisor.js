@@ -43,7 +43,7 @@ class Supervisor extends Component {
 
         this.state = {
             title: "Supervisor",
-            sub_title: "",
+            sub_title: "Management of License Conditions",
             main_aim: "Make a new appointment",
             question_1: "What do I need help with?",
             answer_1: "",
@@ -62,11 +62,11 @@ class Supervisor extends Component {
     changeAim(e) {
         var target = e.currentTarget;
         console.log("target", target);
-        
+
         // var value = target.value;
         // console.log("value", value);
     }
-    
+
     updateTextField(e) {
         const target = e.currentTarget;
         console.log("target" , target);
@@ -83,13 +83,13 @@ class Supervisor extends Component {
         this.setState({
             sos_mode: !this.state.sos_mode
         });
-    }   
+    }
 
     toggleAccordion(tab) {
 
         const prevState = this.state.accordion;
         const state = prevState.map((x, index) => tab === index ? !x : false);
-    
+
         this.setState({
           accordion: state,
         });
@@ -97,7 +97,7 @@ class Supervisor extends Component {
 
     render() {
         const { sos_mode, accordion } = this.state;
-    
+
         return (
             <div>
                 <h1>{this.state.title}</h1>
@@ -106,14 +106,14 @@ class Supervisor extends Component {
                 }
                 <h4>{this.state.sub_title}</h4>
 
-               
-                <Card 
+
+                <Card
                 className={
                     this.state.sos_mode ? 'border-danger' : ''
                 }>
                     <CardHeader>
                         My aim is to:
-                        </CardHeader> 
+                        </CardHeader>
                     <CardBody>
                         {/* <CardTitle onClick={this.changeAim}>
                         <input  defaultValue={this.state.main_aim}/>
@@ -121,13 +121,13 @@ class Supervisor extends Component {
                         <CardTitle> {this.state.main_aim} 
                         <Button color={this.state.sos_mode ? 'link' : 'danger'} onClick={this.toggle}>{this.state.sos_mode ? 'I did it' : 'SOS'}</Button>
                         </CardTitle>
-                 
+
                 <div id="accordion">
-                  
+
                      <CardHeader>
                       <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)} aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
                         <h5 className="m-0 p-0">
-                        {this.state.question_1} 
+                        {this.state.question_1}
                         {!this.state.accordion[0] &&
                             <FaCaretRight/>
                         }
@@ -136,23 +136,23 @@ class Supervisor extends Component {
                         }
                         </h5>
                       </Button>
-                      </CardHeader> 
+                      </CardHeader>
                     <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne">
                       <CardBody>
-                            
+
                             <textarea rows="15" cols="20"
                             defaultValue={ this.state.answer_1 || 'This field is editable.' }
         				    name="answer_area_1"/>
                             <Button onClick={this.updateTextField}>Save and Close</Button>
-                      
+
                        </CardBody>
                     </Collapse>
-                 
+
                     <CardHeader>
                       <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(1)} aria-expanded={this.state.accordion[1]} aria-controls="collapseTwo">
                         <h5 className="m-0 p-0">
                         {this.state.question_2}
-                        
+
                         {!this.state.accordion[1] &&
                             <FaCaretRight/>
                         }
@@ -163,7 +163,7 @@ class Supervisor extends Component {
 
                         </h5>
                       </Button>
-                    </CardHeader> 
+                    </CardHeader>
                     <Collapse isOpen={this.state.accordion[1]} data-parent="#accordion" id="collapseTwo">
                       <CardBody>
                         This field is not editable!
@@ -172,7 +172,7 @@ class Supervisor extends Component {
                     <CardHeader>
                       <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(2)} aria-expanded={this.state.accordion[2]} aria-controls="collapseThree">
                         <h5 className="m-0 p-0">
-                        {this.state.question_3} 
+                        {this.state.question_3}
 
                         {!this.state.accordion[2] &&
                             <FaCaretRight/>
@@ -181,10 +181,10 @@ class Supervisor extends Component {
                         {this.state.accordion[2] &&
                             <FaCaretDown/>
                         }
-                        
+
                         </h5>
                       </Button>
-                      </CardHeader> 
+                      </CardHeader>
                     <Collapse isOpen={this.state.accordion[2]} data-parent="#accordion" id="collapseThree">
                       <CardBody>
                         This field is not editable!
@@ -193,7 +193,7 @@ class Supervisor extends Component {
                     <CardHeader>
                       <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(3)} aria-expanded={this.state.accordion[2]} aria-controls="collapseThree">
                         <h5 className="m-0 p-0">
-                        {this.state.question_4} 
+                        {this.state.question_4}
 
                         {!this.state.accordion[3] &&
                             <FaCaretRight/>
@@ -202,10 +202,10 @@ class Supervisor extends Component {
                         {this.state.accordion[3] &&
                             <FaCaretDown/>
                         }
-                        
+
                         </h5>
                       </Button>
-                      </CardHeader> 
+                      </CardHeader>
                     <Collapse isOpen={this.state.accordion[3]} data-parent="#accordion" id="collapseThree">
                       <CardBody>
                         This field is not editable!
@@ -214,7 +214,7 @@ class Supervisor extends Component {
                     <CardHeader>
                       <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(4)} aria-expanded={this.state.accordion[2]} aria-controls="collapseThree">
                         <h5 className="m-0 p-0">
-                        {this.state.question_5} 
+                        {this.state.question_5}
 
                         {!this.state.accordion[4] &&
                             <FaCaretRight/>
@@ -223,24 +223,24 @@ class Supervisor extends Component {
                         {this.state.accordion[4] &&
                             <FaCaretDown/>
                         }
-                        
+
                         </h5>
                       </Button>
-                      </CardHeader> 
+                      </CardHeader>
                     <Collapse isOpen={this.state.accordion[4]} data-parent="#accordion" id="collapseThree">
                         <CardBody>
                             This field is not editable!
                         </CardBody>
                     </Collapse>
-                  
+
                 </div>
-            
+
                 </CardBody>
-                </Card> 
+                </Card>
             </div>
         );
     }
-   
+
 }
 
 
